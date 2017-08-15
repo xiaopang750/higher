@@ -1,0 +1,64 @@
+#layout {
+  .wrap {
+    width: 8.2rem;
+    height: 3.2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -1.6rem 0 0 -4.1rem;
+  }
+
+  .tab {
+    width: 2.6rem;
+    height: 1.5rem;
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 0.5rem;
+    position: absolute;
+    box-sizing: border-box;
+    background-size: 100% 100%;
+
+    & span {
+      display: none;
+    }
+
+    &.fe-focus {
+      border: 0.05rem solid #fff;
+    }
+
+    &.tab_movie {
+      width: 2.6rem;
+      height: 3.2rem;
+      left: 0;
+      top: 0;
+      background-image: url('../../res/img/movie_bg.jpg');
+    }
+
+    &.tab_tv {
+      width: 2.6rem;
+      height: 3.2rem;
+      left: 2.8rem;
+      top: 0;
+      background-image: url('../../res/img/tv_bg.jpg');
+    }
+
+    &.tab_zongyi {
+      left: 5.6rem;
+      top: 0;
+      background-image: url('../../res/img/zongyi_bg.jpg');
+    }
+
+    &.tab_comic {
+      left: 5.6rem;
+      top: 1.7rem;
+      background-image: url('../../res/img/comic_bg.jpg');
+    }
+
+    &.tab_jilupian {
+      left: 5.6rem;
+      top: 1.7rem;
+      background-image: url('../../res/img/jilupian_bg.jpg');
+    }
+  }
+}

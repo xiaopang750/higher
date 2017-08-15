@@ -1,0 +1,7 @@
+div#detail.scene.clearfix(fe-role="Switch")
+  include ../../component/detail/index
+  +detail()
+  if ctg === 'movie'
+    //- 相关推荐由于能播放的源很少所以暂时不显示
+    //- include ../../component/reclist/index
+    //- +reclist(recs)

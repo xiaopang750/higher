@@ -1,0 +1,30 @@
+{
+  "package": "higher.tv.yunos.com",
+  "versioncode": 2100100000,
+  "versionname": "1.0.0",
+  "use-sdk": "yunos_webos_v1.0",
+  "label": "@title",
+  "icon": "res/img/icon.png",
+  "developer": "ali",
+  "permissions": [],
+  "use-permissions": [
+    {"name": "INTERNET.permission.yunos.com"},
+    {"name": "MEDIA_VIDEO_AUDIO_PLAY.permission.yunos.com"},
+    {"name": "STORAGE_RW.permission.yunos.com"},
+    {"name": "NETWORK_LISTEN.permission.yunos.com"},
+    {"name": "WRITE_MEDIA_STORAGE.permission.yunos.com"},
+    {"name": "STORAGE_ADMIN.permission.yunos.com"}
+  ],
+  "stages": {
+    "index": {
+      "description": "This is main stage.",
+      "entry": "stage/index/index.html",
+      "type": "web",
+      "category": [
+        "yunos.category.main"
+      ],
+      "require-permissions": [],
+      "background-color": "#ffffffff"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+div.allEpisode
+  - var size = 100;
+  if episodes.length > size
+    ul.tabs#tabs(fe-role="Switch")
+      - var tabsLength = episodes.length;
+      - var tabs = new Array(Math.ceil(tabsLength / size ));
+      each v, index in tabs
+        - var start = index * size + 1;
+        - var end = (index + 1) * size;
+        li(fe-role="Widget", class=(index == 0) ? 'selected' : '')= start + '-' + (end > tabsLength ? tabsLength : end)
+  ul.episodes#episodes(fe-role="Switch")

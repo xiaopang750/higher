@@ -1,0 +1,11 @@
+src/component/videolist/mockData.js
+src/component/sidebar/mock.js
+src/component/detail/mockData.js
+src/lib/js
+node_modules
+build
+buildLocal
+src/res/js/utils
+src/playjs/parser.js
+src/playjs
+src/injectHash.txt

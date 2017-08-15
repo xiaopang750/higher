@@ -1,0 +1,16 @@
+li(fe-role="Widget", click-role="filter")
+  span.item
+    span.icon &#xf0b0
+    span 筛选
+//- li(fe-role="Widget", click-role="search")
+//-   span.item
+//-     span.icon &#xf002
+//-     span 搜索
+each val, index in list
+  - var qs = encodeURIComponent(JSON.stringify(val.qs || {}));
+  - if (index === 0)
+    li(fe-role="Widget", data-href=val.href, data-qs=qs, click-role="filter-list", fe-cfg="default_focus:yes")
+      span.item=val.name
+  - else
+    li(fe-role="Widget", data-href=val.href, data-qs=qs, click-role="filter-list")
+      span.item=val.name

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta blitz-debugger="localhost">
+  <meta name="viewport" content="width=1920">
+  <title>index</title>
+  <link rel="stylesheet" href="../../lib/css/base.css" />
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+<script src="../../lib/js/firedata.js"></script>
+<!-- <script src="http://g.alicdn.com/de/alitv-debug/1.1.10/index.min.js"></script> -->
+<script>
+  !function(key, params) {
+    var w = window, d = document, _fd=w._fd=w._fd||[], methods = ["pageView","event","event2app","autoEvent2app","setUserInfo","setContentInfo","setParams"];
+    var fac=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);_fd.push(e);return _fd}};
+    for(var t=0;t<methods.length;t++){var e=methods[t];_fd[e]=fac(e)};_fd.setParams(params);
+    // var g = d.createElement('script'), s = d.getElementsByTagName('script')[0];g.type = 'text/javascript';g.async = true;g.defer = true;g.src = 'http//sdk.firedata.cc/js/'+key+'.js';s.parentNode.insertBefore(g, s);
+  }('TVAPKJF6OH');
+</script>
+<script src="../../lib/js/FocusEngine.min.js"></script>
+<script src="../../lib/js/blitz.js"></script>
+<script src="../../lib/js/moye.min.js"></script>
+<script src="../../lib/js/animate_marquee.js"></script>
+<script src="../../lib/js/widget_marquee.js"></script>
+<script src="../../lib/js/flexible.js"></script>
+<script src="../../lib/js/eventproxy.js"></script>
+<script src="../../lib/js/zepto.js"></script>
+<script>
+  window.ep = new EventProxy();
+</script>
+<script src="./index.js"></script>
+</body>
+</html>

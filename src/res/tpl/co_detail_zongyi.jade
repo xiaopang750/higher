@@ -1,0 +1,40 @@
+-function assemble (data) {
+- if (!data || !data.length) {
+-   return '暂无';
+- }
+- return data.map(function(item){return item.name;}).join(' / ');
+-};
+script.
+  var videoInfo = {};
+  videoInfo.id = '#{id}';
+  videoInfo.ctg = '#{ctg}';
+  videoInfo.title = '#{title}';
+  videoInfo.thumnail = '#{imgUrl.url}';
+img.intro-face(src="#{imgUrl.url}")
+div.intro-content
+  div.intro-content-bar
+    span.intro-content-title=title
+  p.intro-content-introduce=(intro.length > 120) ? intro.substring(0,120) + '...' : intro
+  div.intro-content-control
+    div.intro-content-control-play.intro-content-control-item.play(fe-role="Widget", ep="#{episodes[0].episode}")
+      span.icon &#xf04b
+      span 播放
+    //- div.intro-content-control-fav.intro-content-control-item(fe-role="Widget")
+    //-   span.icon &#xf0b0
+    //-   span 收藏
+    div.intro-content-control-source
+      span 视频源
+      div.source-scroll(fe-role="Scroll", fe-cfg="scroll_dir:h,auto_list_width:yes")
+        ul.scroll-list#source-list
+          - var ep = episodes[0].episode;
+          each v, index in site
+            li.source-item.play(fe-role="Widget", data-source=v.siteSource, ep=ep)
+              img(src='assets/img/' + v.siteSource + '.png', title=v.siteName)
+div.zongyi
+  div.years(fe-role="Scroll")
+    ul.scroll-list
+      each v, index in years
+        li.zongyi-year(fe-role="Widget", data-year=v)=v
+      li.zongyi-year.special(fe-role="Widget") 全部选集
+  div#zongyiEpisode(fe-role="Scroll")
+    ul.scroll-list

@@ -1,0 +1,36 @@
+mixin billion_ticket(item)
+  - var isShowTicketClass = (item.billion_ticket_num < 1 || sort !== 'billion_ticket_num') ? 'hidden' : '';
+  div.billion_ticket_num_wrap(class="#{isShowTicketClass}")
+    div.billion_ticket_bg
+    div.billion_ticket_num=item.billion_ticket_num + '亿'
+    
+mixin rating(item)
+  - if(item.rating)
+    - var rating = (item.rating/10).toFixed(1);
+    div(class="rating")
+      span=rating
+
+- var hasList = videolist_set.length;
+- if (!hasList)
+  div.no-result
+    span 这个筛选条件没有筛选结果，试试其他条件吧
+div.result.clearfix
+  - if (hasList)
+    div.pager= '第' + page.curr + '页 / 共' + Math.ceil(page.total / page.pagesize) + '页'
+ul.list-wrap.clearfix(fe-role="Switch", id="#{root}list-wrap")
+  - if (hasList)
+    each item, index in videolist_set
+      if item
+        - var videoid = item.id;
+        - var videoctg = item.ctg;
+        - var faceImage = item.topic ? item.pic : (item.imgUrl ? item.imgUrl.url : '');
+        li(data-index = index, data-id = videoid, data-ctg = videoctg, fe-role = "Widget")
+          dl
+            dt
+              img(data-face, src="#{faceImage}")
+              +billion_ticket(item)
+              +rating(item)
+            dd
+              span(title)=item.title
+      else
+        li

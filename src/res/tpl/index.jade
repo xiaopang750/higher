@@ -1,0 +1,11 @@
+div#index.clearfix.scene(fe-role="Switch")
+  include ../../component/sidebar/index
+  include ../../component/videolist/index
+  +videolist({
+    page: 'index',
+    col: 5,
+    width: '1.5rem',
+    space: '0.15rem',
+    imgScale: 182/243,
+    unit: 'rem'
+  })

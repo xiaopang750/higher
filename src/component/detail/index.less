@@ -1,0 +1,275 @@
+.intro {
+  margin-top: 0.35rem;
+  width: 100%;
+  height: 2.8rem;
+
+  &-face {
+    width: 2.1rem;
+    height: 2.8rem;
+  }
+
+  &-content {
+    width: 6.15rem;
+    height: 2.8rem;
+    padding-left: 0.15rem;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+
+    &-bar {
+      width: 100%;
+      height: 0.4rem;
+      margin-bottom: 0.1rem;
+    }
+
+    &-title {
+      max-width: 4rem;
+      display: inline-block;
+      font-size: 0.4rem;
+      line-height: 0.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: top;
+    }
+
+    &-year {
+      margin-left: 0.15rem;
+      display: inline-block;
+      font-size: 0.3rem;
+      color: gray;
+      vertical-align: top;
+    }
+
+    &-update {
+      margin-left: 0.15rem;
+      display: inline-block;
+      font-size: 0.24rem;
+      line-height: 0.5rem;
+      color: gray;
+      vertical-align: top;
+
+      strong {
+        color: #ff5a00;
+      }
+    }
+
+    &-score {
+      position: absolute;
+      right: 0;
+      height: 0.4rem;
+      line-height: 0.4rem;
+      //float: right;
+      font-size: 0.3rem;
+
+      & img {
+        width: 0.2rem;
+        height: 0.2rem;
+        vertical-align: middle;
+      }
+
+      & span {
+        color: #ff5a00;
+      }
+
+      & small {
+        color: #999;
+        display: inline-block;
+        margin: 0 0.1rem;
+        font-size: 0.2rem;
+      }
+    }
+
+    & p {
+      color: #999;
+      font-size: 0.18rem;
+      line-height: 0.25rem;
+      overflow: hidden;
+    }
+
+    &-director {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-actor {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-tag {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      & span {
+        display: inline-block;
+        margin-right: 0.1rem;
+      }
+    }
+
+    &-introduce {
+      margin-top: 0.05rem;
+      height: 1rem;
+    }
+
+    &-control {
+      width: 100%;
+      height: 0.46rem;
+      position: absolute;
+      bottom: 0;
+      font-size: 0.28rem;
+
+      & > div {
+        padding: 0 0.2rem;
+        border: 0.01rem #999 solid;
+        border-radius: 12px;
+        vertical-align: top;
+        line-height: 0.44rem;
+        margin-right: 0.1rem;
+        display: inline-block;
+
+        .icon {
+          line-height: 0.42rem;
+        }
+
+        & span {
+          line-height: 0.44rem;
+        }
+      }
+
+      & .intro-content-control-item.fe-focus {
+        color: #fff;
+        border: 0.01rem #fff solid;
+        background: -webkit-linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+        background: linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+        background: #0a67b5;
+      }
+
+      &-source {
+        .source-scroll {
+          display: inline-block;
+          width: 0.8rem;
+          overflow: hidden;
+          height: 0.44rem;
+          vertical-align: top;
+          margin-left: 0.1rem;
+
+          ul {
+            display: inline-block;
+          }
+
+          li {
+            padding: 0 5px;
+            display: inline-block;
+
+            img {
+              width: 0.4rem;
+              height: 0.4rem;
+            }
+
+            &.fe-focus {
+              background: -webkit-linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+              background: linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+              background: #0a67b5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.episodelist {
+  margin-top: 0.2rem;
+  width: 100%;
+  height: 2rem;
+  overflow: hidden;
+
+  ul {
+    width: 8.5rem;
+    font-size: 0.26rem;
+
+    li {
+      float: left;
+      width: 0.75rem;
+      height: 0.42rem;
+      line-height: 0.42rem;
+      text-align: center;
+      margin: 0 0.1rem 0.1rem 0;
+      box-sizing: border-box;
+      border-radius: 8px;
+      box-shadow: inset 0 0 1px 1px #232a3a;
+      background: none repeat scroll 0 0 rgba(21, 20, 25, 0.6);
+
+      &.fe-focus {
+        box-shadow: inset 0 0 1px 1px #fff;
+        background: -webkit-linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+        background: linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+        background: #0a67b5;
+      }
+
+      &.special {
+        width: 1.6rem;
+      }
+    }
+  }
+}
+
+.zongyi {
+  margin-top: 0.2rem;
+
+  .years {
+    width: 2.1rem;
+    height: 2.2rem;
+    display: inline-block;
+    overflow: hidden;
+
+    li {
+      margin-bottom: 0.05rem;
+      font-size: 0.22rem;
+      text-align: center;
+      border-radius: 8px;
+      background: rgba(21, 20, 25, 0.6);
+      box-shadow: inset 0 0 1px 1px #232a3a;
+
+      &.fe-focus {
+        box-shadow: inset 0 0 1px 1px #fff;
+        background: -webkit-linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+        background: linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+        background: #0a67b5;
+      }
+
+      &.selected {
+        color: #1d9cc5;
+      }
+    }
+  }
+
+  #zongyiEpisode {
+    vertical-align: top;
+    width: 6.15rem;
+    height: 2.2rem;
+    display: inline-block;
+    margin-left: 0.15rem;
+    overflow: hidden;
+
+    ul {
+      li {
+        padding-left: 0.2rem;
+        box-sizing: content-box;
+        margin-bottom: 0.05rem;
+        font-size: 0.22rem;
+        border-radius: 8px;
+        background: rgba(21, 20, 25, 0.6);
+        box-shadow: inset 0 0 1px 1px #232a3a;
+
+        &.fe-focus {
+          box-shadow: inset 0 0 1px 1px #fff;
+          background: -webkit-linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+          background: linear-gradient(top, #178cee 0, #0a67b5 50%, #176fba 100%);
+          background: #0a67b5;
+        }
+      }
+    }
+  }
+}

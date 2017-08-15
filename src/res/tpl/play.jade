@@ -1,0 +1,10 @@
+div#play(fe-role="Switch")
+  ul#list(fe-role="Switch")
+    li.deji(fe-role="Widget") 1
+    li.deji(fe-role="Widget") 2
+    li.deji(fe-role="Widget", data-href="http://www.iqiyi.com/v_19rr9ysrmw.html") 3
+  include ../../component/player/index
+  +player({
+    page: 'play'
+  })
+  include ../../component/loading/index

@@ -1,0 +1,4 @@
+mixin videolist(opts)
+  - var opts = opts || {};
+  div.videolist-wrap
+    div.videolist(data-unit = opts.unit, data-col = opts.col, data-width = opts.width, data-space = opts.space, data-imgScale = opts.imgScale, fe-role = "Switch", id="#{opts.page}videolist")

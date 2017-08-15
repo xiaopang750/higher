@@ -1,0 +1,8 @@
+div.allZongyiEpisode
+  div.tabs-container#allZongyiYear(fe-role="Scroll", fe-cfg="scroll_dir:h")
+    ul.scroll-list.tabs
+      each v, index in years
+        li
+          span(fe-role="Widget")=v
+  div#zongyiEpisodes(fe-role="Scroll", fe-cfg="scroll_dir:v")
+    ul.scroll-list

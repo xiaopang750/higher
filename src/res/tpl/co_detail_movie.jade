@@ -1,0 +1,44 @@
+-function assemble (data) {
+- if (!data || !data.length) {
+-   return '暂无';
+- }
+- return data.map(function(item){return item.name;}).join(' / ');
+-};
+script.
+  var videoInfo = {};
+  videoInfo.id = '#{id}';
+  videoInfo.ctg = '#{ctg}';
+  videoInfo.title = '#{title}';
+  videoInfo.thumnail = '#{imgUrl.url}';
+  videoInfo.rating = '#{rating}';
+  window.sitePerEpisode = !{JSON.stringify(sitePerEpisode)};
+img.intro-face(src="#{imgUrl.url}")
+div.intro-content
+  div.intro-content-bar
+    span.intro-content-title=title
+    span.intro-content-year=date
+    div.intro-content-score
+      img(src="http://newcdn.tvall.cn/video/image/douban.4957dbff.png")
+      small 评分:
+      span #{rating / 10}
+  p.intro-content-director="导演：" + assemble(director)
+  p.intro-content-actor="主演：" + assemble(actor)
+  p.intro-content-tag
+    span.intro-content-tag-type="类型：" + type.map(function(item){return item.name;}).join(' / ')
+    span.intro-content-tag-area="地区：" + area.map(function(item){return item.name;}).join(' / ')
+    span.intro-content-tag-time="片长：" + Math.ceil(duration / 60) + "分钟"
+  p.intro-content-introduce=(intro.length > 120) ? intro.substring(0,120) + '...' : intro
+  div.intro-content-control
+    div.intro-content-control-play.intro-content-control-item.play(fe-role="Widget",ep="1")
+      span.icon &#xf04b
+      span 播放
+    //- div.intro-content-control-fav.intro-content-control-item(fe-role="Widget")
+    //-   span.icon &#xf0b0
+    //-   span 收藏
+    div.intro-content-control-source
+      span 视频源
+      div.source-scroll(fe-role="Scroll", fe-cfg="scroll_dir:h,auto_list_width:yes")
+        ul.scroll-list#source-list
+          each v, index in site
+            li.source-item.play(fe-role="Widget", data-source=v.siteSource, ep="1")
+              img(src='assets/img/' + v.siteSource + '.png', title=v.siteName)

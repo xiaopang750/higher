@@ -1,0 +1,18 @@
+div.filterbar#filterbar(fe-role="Scroll", data-cfg="scroll_dir:v", filterbar)
+  div.scroll-list(scroll-list)
+    dl
+      dt 排序
+      dd(select-group="sort")
+        span.active(fe-role="Widget", data-search="pubtime") 最新
+        span(fe-role="Widget", data-search="hot") 热播
+    - var typeMap = {type: '类型', area: '地区', year: '年代', actor: '演员'};
+    - var data = filterData.tags;
+    - for (var name in data) {
+      dl
+        dt=typeMap[name]
+        dd(select-group="#{name}")
+          each item, index in data[name]
+            - var isAcitve = index == 0 ? 'active' : '';
+            - var dataSearch = item === '全部' ? '' : item;
+            span(fe-role="Widget", class="#{isAcitve}", data-search="#{dataSearch}")=item
+    - }

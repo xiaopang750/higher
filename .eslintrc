@@ -1,0 +1,57 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint-config-airbnb"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "modules": true,
+      "classes": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    blitz: true,
+    $: true,
+    FocusEngine: true,
+    moye: true,
+    scene: true,
+    tv_marquee: true,
+    ep: true,
+    _fd: true
+  },
+  "rules": {
+    "guard-for-in": 0,
+    "prefer-const": 0,
+    "no-console": 0,
+    "no-param-reassign": 0,
+    "comma-dangle": 0,
+    "object-curly-spacing": 0,
+    "no-underscore-dangle": 0,
+    "global-require": 0,
+    "no-unused-expressions": 0,
+    "import/prefer-default-export": 0,
+    "import/no-dynamic-require": 0,
+    "import/no-mutable-exports": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "no-mixed-operators": 0,
+    "no-lonely-if": 0,
+    "no-else-return": 0,
+    "no-return-assign": 0,
+    "import/no-named-as-default": 1,
+    "no-prototype-builtins": 1,
+    "prefer-arrow-callback": 1,
+    "no-restricted-syntax": 1,
+    "no-unused-vars": [2, {"args": "none"}],
+    "camelcase": 2,
+    "class-methods-use-this": 0,
+    "import/no-extraneous-dependencies": 0
+  }
+}

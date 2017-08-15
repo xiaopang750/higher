@@ -1,0 +1,32 @@
+.loading {
+  display: none;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  text-align: center;
+  z-index: 3000;
+  animation: spin 2s infinite linear;
+
+  &.show {
+    display: block;
+  }
+
+  & .icon-spin {
+    padding: 0;
+    font-size: 0.6rem;
+    line-height: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}

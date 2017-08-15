@@ -1,0 +1,47 @@
+-function assemble (data) {
+- if (!data || !data.length) {
+-   return '暂无';
+- }
+- return data.map(function(item){return item.name;}).join(' / ');
+-};
+script.
+  var videoInfo = {};
+  videoInfo.id = '#{id}';
+  videoInfo.ctg = '#{ctg}';
+  videoInfo.title = '#{title}';
+  videoInfo.thumnail = '#{imgUrl.url}';
+  window.sitePerEpisode = !{JSON.stringify(sitePerEpisode)};
+img.intro-face(src="#{imgUrl.url}")
+div.intro-content
+  div.intro-content-bar
+    span.intro-content-title=title
+    span.intro-content-update!=update.replace(/(\d+)/, '<strong>$1</strong>')
+  p.intro-content-actor="主演：" + assemble(actor)
+  p.intro-content-tag
+    span.intro-content-tag-type="类型：" + assemble(type)
+  p.intro-content-introduce=(intro.length > 120) ? intro.substring(0,120) + '...' : intro
+  div.intro-content-control
+    div.intro-content-control-play.intro-content-control-item.play(fe-role="Widget", ep="#{finish === 1 ? 1 : episodes.length}")
+      span.icon &#xf04b
+      span #{finish === 1 ? "第一集" : "最新一集"}
+    //- div.intro-content-control-fav.intro-content-control-item(fe-role="Widget")
+    //-   span.icon &#xf0b0
+    //-   span 收藏
+    div.intro-content-control-source
+      span 视频源
+      div.source-scroll(fe-role="Scroll", fe-cfg="scroll_dir:h,auto_list_width:yes")
+        ul.scroll-list#source-list
+          - var ep = finish === 1 ? episodes[0] : episodes[episodes.length - 1];
+          each v, index in site
+            li.source-item.play(fe-role="Widget", data-source=v.siteSource, ep=ep)
+              img(src='assets/img/' + v.siteSource + '.png', title=v.siteName)
+div.episodelist
+  ul
+    - for (var i = 0; i < episodes.length; i += 1)
+      - var index = finish === 1 ? i : episodes.length - i - 1
+      - var ep = episodes[index]
+      - var allText = (finish === 1 ? '全部' : '更新') + episodes.length + '集'
+      - if (i === 8 && episodes.length > 40)
+        li.episode.special(fe-role="Widget", data-spa="episode_" + ctg) #{allText}
+        - i = episodes.length - 30
+      li.episode(fe-role="Widget", ep=ep)= ep

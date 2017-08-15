@@ -1,0 +1,5 @@
+each val, index in recs
+  li(fe-role="Widget", data-id="#{val.id}")
+    div.rec-content
+      img(src="#{val.imgUrl.url}")
+      p #{val.title}

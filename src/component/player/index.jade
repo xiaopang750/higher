@@ -1,0 +1,8 @@
+mixin player(opts)
+  - var opts = opts || {};
+  div.video-container.fullscreen(id="#{opts.page}-video-wrapper")
+    video#video(preload = "none")
+    div#video-ui.video-ui
+      div.video-ui-title
+      div.video-ui-artist
+      span.icon.video-ui-pause &#xf01d

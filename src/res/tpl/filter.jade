@@ -1,0 +1,11 @@
+div#filter.scene.clearfix(fe-role="Switch")
+  include ../../component/filter/index
+  include ../../component/videolist/index
+  +videolist({
+    page: 'filter',
+    col: 4,
+    width: '1.3rem',
+    space: '0.15rem',
+    imgScale: 182/243,
+    unit: 'rem'
+  })

@@ -1,0 +1,4 @@
+ul.scroll-list
+  each v, index in videos
+    -var ep = v.episode.toString();
+    li.zongyi-episode(fe-role="Widget", ep=ep)=ep.replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3') + '  ' + v.title

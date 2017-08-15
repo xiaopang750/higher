@@ -1,0 +1,29 @@
+.toast {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  bottom: 80px;
+  z-index: 6000;
+  display: none;
+
+  &.active {
+    display: block;
+
+    & .toast-text {
+      opacity: 1;
+    }
+  }
+
+  & .toast-text {
+    display: inline-block;
+    padding: 0.1rem 0.3rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 0.2rem;
+    border-radius: 0.1rem;
+    box-shadow 1px: 1px 1px #000;
+    opacity: 0;
+    transition: 1s;
+  }
+}

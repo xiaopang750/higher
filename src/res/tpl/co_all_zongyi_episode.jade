@@ -1,0 +1,3 @@
+each v, index in videos
+  -var ep = v.episode.toString();
+  li.all-zongyi-episode(fe-role="Widget", ep=ep) #{ep.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')}
